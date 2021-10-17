@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    tools:context=".ui.HelpActivity"
+    tools:layout_editor_absoluteX="7dp"
+    tools:layout_editor_absoluteY="-1dp">
+
+    <ImageView
+        android:id="@+id/backButtonShape"
+        android:layout_width="60dp"
+        android:layout_height="58dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backButton"
+        app:layout_constraintEnd_toEndOf="@+id/backButton"
+        app:layout_constraintStart_toStartOf="@+id/backButton"
+        app:layout_constraintTop_toTopOf="@+id/backButton"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="74dp"
+        android:layout_height="73dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071"
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        app:tint="@color/orange"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/aboutAuthorText"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/about_author"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textColorLink="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/aboutGameTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.915"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/aboutGameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/about_game_title"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/aboutGameText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/assetCreditsText"
+        android:layout_width="395dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/asset_credits_text"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textColorLink="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.922"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/assetCreditsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/asset_credits_title"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/assetCreditsText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/aboutAuthorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/about_author_title"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/aboutAuthorText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.851" />
+
+    <TextView
+        android:id="@+id/aboutGameText"
+        android:layout_width="554dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/about_game_text"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/assetCreditsTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

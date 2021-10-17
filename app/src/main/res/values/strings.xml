@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Mushroom Seeker</string>
+    
+    <string name="about_author_title">about the author</string>
+    <string name="about_author">This project was made by Michelle Vong, and it is
+        for CMPT 276. The course website can be viewed here:
+    <a href="https://opencoursehub.cs.sfu.ca/bfraser/grav-cms/cmpt276/home">
+        opencoursehub.cs.sfu.ca/bfraser/grav-cms/cmpt276/home</a></string>
+    <string name="about_game_title">about the game</string>
+    <string name="about_game_text">Mushroom Seeker is a game where the player must find all mushrooms
+    hidden in the squares of the grid. If the player taps on a square that does not contains a mushroom,
+    the square will display the amount of mushrooms within the row and column. The goal of the game is
+    to find all the mushrooms with the least number of movements.</string>
+    <string name="asset_credits_title">asset credits</string>
+    <string name="asset_credits_text">
+        <a href="http://www.southperry.net/showthread.php?t=82388">
+            http://www.southperry.net/showthread.php?t=82388
+        </a>
+        <a href="https://www.seekpng.com/ima/u2e6q8q8t4y3y3u2/">
+            https://www.seekpng.com/ima/u2e6q8q8t4y3y3u2/
+        </a>
+    </string>
+    
 </resources>
