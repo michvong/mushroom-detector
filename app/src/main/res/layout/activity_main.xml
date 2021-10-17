@@ -50,6 +50,17 @@
         app:layout_constraintVertical_bias="0.14" />
 
     <ImageView
+        android:id="@+id/whiteLine"
+        android:layout_width="530dp"
+        android:layout_height="78dp"
+        android:layout_marginEnd="228dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
         android:id="@+id/circle"
         android:layout_width="439dp"
         android:layout_height="368dp"
@@ -63,18 +74,19 @@
         android:id="@+id/sprite"
         android:layout_width="379dp"
         android:layout_height="215dp"
+        android:layout_marginStart="348dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toEndOf="@+id/titleShadow"
+        app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954"
+        app:layout_constraintVertical_bias="0.801"
         app:srcCompat="@drawable/slime_mushroom" />
 
     <Button
         android:id="@+id/startButton"
-        android:layout_width="221dp"
-        android:layout_height="63dp"
+        android:layout_width="227dp"
+        android:layout_height="65dp"
         android:backgroundTint="@color/white"
         android:text="Start"
         android:textColor="@color/orange"
@@ -96,10 +108,10 @@
         app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.287"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toEndOf="@+id/optionsButton"
+        app:layout_constraintTop_toBottomOf="@+id/startButton"
+        app:layout_constraintVertical_bias="0.066" />
 
     <Button
         android:id="@+id/optionsButton"
@@ -112,20 +124,9 @@
         app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
-
-    <ImageView
-        android:id="@+id/whiteLine"
-        android:layout_width="474dp"
-        android:layout_height="78dp"
-        android:layout_marginEnd="316dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.996"
-        app:srcCompat="@drawable/line" />
+        app:layout_constraintTop_toBottomOf="@+id/startButton"
+        app:layout_constraintVertical_bias="0.066" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
