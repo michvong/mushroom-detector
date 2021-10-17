@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MineSeeker">
         <activity
-            android:name=".ui.WelcomeScreen"
+            android:name=".ui.WelcomeActivity"
             android:screenOrientation="landscape"
             android:exported="true">
             <intent-filter>
@@ -19,7 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.MainActivity"/>
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="landscape"/>
 
         <meta-data
             android:name="preloaded_fonts"

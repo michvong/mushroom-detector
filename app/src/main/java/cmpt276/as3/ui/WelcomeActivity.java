@@ -11,36 +11,31 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import cmpt276.as3.R;
 
-public class WelcomeScreen extends AppCompatActivity {
-    private static int time = 4000;
-    private Button button;
+public class WelcomeActivity extends AppCompatActivity {
+    private static final int DELAY_TIME_IN_MILLISECONDS = 4000;
+    private Button continueButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.welcome_screen);
+        setContentView(R.layout.activity_welcome);
 
-        button = (Button) findViewById(R.id.continueButton);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openMainActivity();
-            }
-        });
+        continueButton = findViewById(R.id.continueButton);
+        continueButton.setOnClickListener((View view) -> openMainActivity());
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(WelcomeScreen.this, MainActivity.class);
+                Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 finish();
             }
-        },time);
+        }, DELAY_TIME_IN_MILLISECONDS);
     }
 
     public void openMainActivity() {
-        Intent intent = new Intent(WelcomeScreen.this, MainActivity.class);
+        Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
         startActivity(intent);
     }
 
