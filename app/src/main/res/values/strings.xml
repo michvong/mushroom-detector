@@ -24,6 +24,8 @@
         </a>
     </string>
 
-    <string name="num_scans_title"># scans used: </string>
+    <string name="num_scans"># scans used: %1$d</string>
+    <string name="num_mushrooms">Found %1$d of %2$d mushrooms.</string>
+
 
 </resources>
