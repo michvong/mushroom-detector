@@ -23,19 +23,24 @@ public class MainActivity extends AppCompatActivity {
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         startButton = findViewById(R.id.startButton);
+        openStartMenu();
+
         optionsButton = findViewById(R.id.optionsButton);
+        openOptionsMenu();
+
         helpButton = findViewById(R.id.helpButton);
-        helpButton.setOnClickListener((View view) -> {
-            Intent intent = new Intent(MainActivity.this, HelpActivity.class);
-            startActivity(intent);
-            finish();
-        });
+        openHelpMenu();
 
         animateButtonSlide(startButton);
         animateButtonSlide(optionsButton);
         animateButtonSlide(helpButton);
-
     }
+
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
+    }
+
 
     public void animateButtonSlide(Button button) {
         button.setAlpha(0f);
@@ -43,9 +48,24 @@ public class MainActivity extends AppCompatActivity {
         button.animate().alpha(1f).translationXBy(-50).setDuration(1000);
     }
 
-    public void openHelpMenu() {
-        Intent intent = new Intent(MainActivity.this, HelpActivity.class);
-        startActivity(intent);
+    public void openStartMenu() {
+        startButton.setOnClickListener((View view) -> {
+            Intent intent = new Intent(MainActivity.this, GameActivity.class);
+            startActivity(intent);
+        });
     }
 
+    public void openOptionsMenu() {
+        optionsButton.setOnClickListener((View view) -> {
+            Intent intent = new Intent(MainActivity.this, OptionsActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    public void openHelpMenu() {
+        helpButton.setOnClickListener((View view) -> {
+            Intent intent = new Intent(MainActivity.this, HelpActivity.class);
+            startActivity(intent);
+        });
+    }
 }

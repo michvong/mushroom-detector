@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MineSeeker">
         <activity
+            android:name=".ui.OptionsActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".ui.GameActivity"
+            android:exported="true"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".ui.HelpActivity"
-            android:screenOrientation="landscape"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".ui.WelcomeActivity"
             android:exported="true"

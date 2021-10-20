@@ -13,8 +13,6 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import cmpt276.as3.R;
 import cmpt276.as3.model.Cell;
 import cmpt276.as3.model.GameBoard;
@@ -111,22 +109,38 @@ public class GameActivity extends AppCompatActivity {
         if (theGameBoard[row][col].isScanned()) {
             return;
         }
-        theGameBoard[row][col].setScanned(true);
 
+        setScanned(row, col);
+        updateDisplay(row, col);
+        lockButtonSizes();
+        setCellVals(row, col, button);
+        checkIfWon();
+    }
+
+    private void setScanned(int row, int col) {
+        theGameBoard[row][col].setScanned(true);
+    }
+
+    private void updateDisplay(int row, int col) {
         if (theGameBoard[row][col].isMushroom()) {
             updateFoundMushrooms();
             updateRemainingMushroomsDisplay();
         }
         updateScanDisplay();
-        lockButtonSizes();
+    }
 
+    private void showMushroomImage(Button button) {
+        int newWidth = button.getWidth();
+        int newHeight = button.getHeight();
+        Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.zombie_mushroom);
+        Bitmap scaledBitmap = Bitmap.createScaledBitmap(originalBitmap, newWidth, newHeight, true);
+        Resources resource = getResources();
+        button.setBackground(new BitmapDrawable(resource, scaledBitmap));
+    }
+
+    private void setCellVals(int row, int col, Button button) {
         if (theGameBoard[row][col].isMushroom()) {
-            int newWidth = button.getWidth();
-            int newHeight = button.getHeight();
-            Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.zombie_mushroom);
-            Bitmap scaledBitmap = Bitmap.createScaledBitmap(originalBitmap, newWidth, newHeight, true);
-            Resources resource = getResources();
-            button.setBackground(new BitmapDrawable(resource, scaledBitmap));
+            showMushroomImage(button);
 
             for (int i = 0; i < numRows; i++) {
                 for (int j = 0; j < numColumns; j++) {
@@ -136,6 +150,12 @@ public class GameActivity extends AppCompatActivity {
         } else {
             gameBoard.setRemainingMushroomsOfCell(row, col);
             button.setText("" + theGameBoard[row][col].getNumRemainingMushrooms());
+        }
+    }
+
+    private void checkIfWon() {
+        if (playerStats.getNumCellsFound() == gameBoard.getNumMushrooms()) {
+            showWinnerMessage();
         }
     }
 
@@ -178,4 +198,10 @@ public class GameActivity extends AppCompatActivity {
             }
         }
     }
+
+    private void showWinnerMessage() {
+        WinnerDialog winnerDialog = new WinnerDialog();
+        winnerDialog.show(getSupportFragmentManager(), "winnerMessage");
+    }
+
 }

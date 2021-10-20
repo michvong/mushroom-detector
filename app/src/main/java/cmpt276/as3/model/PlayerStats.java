@@ -23,7 +23,6 @@ public class PlayerStats {
         return numScans;
     }
 
-
     public int getNumCellsFound() {
         return numCellsFound;
     }

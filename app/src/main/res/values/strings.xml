@@ -14,18 +14,31 @@
     <string name="asset_credits_title">asset credits</string>
     <string name="asset_credits_text">
         <a href="http://www.southperry.net/showthread.php?t=82388">
-            http://www.southperry.net/showthread.php?t=82388
+            http://www.southperry.net/showthread.php?t=82388,
         </a>
         <a href="https://www.seekpng.com/ima/u2e6q8q8t4y3y3u2/">
-            https://www.seekpng.com/ima/u2e6q8q8t4y3y3u2/
+            https://www.seekpng.com/ima/u2e6q8q8t4y3y3u2/,
         </a>
         <a href="https://tinyurl.com/9zd3tt34">
-            https://tinyurl.com/9zd3tt34
+            https://tinyurl.com/9zd3tt34,
         </a>
+        <a href="https://tinyurl.com/ywh328su">
+            https://tinyurl.com/ywh328su</a>
     </string>
 
     <string name="num_scans"># scans used: %1$d</string>
     <string name="num_mushrooms">Found %1$d of %2$d mushrooms.</string>
 
+    <string-array name="grid_sizes">
+        <item>4 x 6</item>
+        <item>5 x 10</item>
+        <item>6 x 15 </item>
+    </string-array>
 
+    <string-array name="num_mushrooms">
+        <item>6</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+    </string-array>
 </resources>

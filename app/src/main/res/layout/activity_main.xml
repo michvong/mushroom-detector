@@ -25,13 +25,13 @@
 
     <ImageView
         android:id="@+id/darkOrangeLine"
-        android:layout_width="920dp"
-        android:layout_height="81dp"
+        android:layout_width="960dp"
+        android:layout_height="84dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115"
+        app:layout_constraintVertical_bias="0.11"
         app:srcCompat="@drawable/dark_orange_line"
-        tools:layout_editor_absoluteX="-2dp" />
+        tools:layout_editor_absoluteX="-54dp" />
 
     <TextView
         android:id="@+id/title"

@@ -32,12 +32,23 @@ public class Options {
         return rowSize;
     }
 
-
     public int getColumnSize() {
         return columnSize;
     }
 
     public int getNumMushrooms() {
         return numMushrooms;
+    }
+
+    public void setRowSize(int rowSize) {
+        this.rowSize = rowSize;
+    }
+
+    public void setColumnSize(int columnSize) {
+        this.columnSize = columnSize;
+    }
+
+    public void setNumMushrooms(int numMushrooms) {
+        this.numMushrooms = numMushrooms;
     }
 }
