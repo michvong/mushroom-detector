@@ -10,6 +10,10 @@ import android.widget.Button;
 
 import cmpt276.as3.R;
 
+/*
+    This activity represents the main menu of the game.
+    It includes buttons which lead to the gameplay, options, and help screens.
+ */
 public class MainActivity extends AppCompatActivity {
     private Button startButton;
     private Button optionsButton;

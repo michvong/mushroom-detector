@@ -1,5 +1,8 @@
 package cmpt276.as3.model;
 
+/*
+    This class represents the number of scans, number of cells found, and the best score of the player.
+ */
 public class PlayerStats {
     private int numScans;
     private int numCellsFound;

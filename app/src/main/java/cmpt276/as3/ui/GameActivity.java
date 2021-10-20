@@ -19,6 +19,9 @@ import cmpt276.as3.model.GameBoard;
 import cmpt276.as3.model.Options;
 import cmpt276.as3.model.PlayerStats;
 
+/*
+    This activity represents the gameplay component.
+ */
 public class GameActivity extends AppCompatActivity {
     private static final int NUM_SCANS_AT_START = 0;
     private static final int NUM_CELLS_FOUND_AT_START = 0;

@@ -14,6 +14,9 @@ import android.widget.Button;
 
 import cmpt276.as3.R;
 
+/*
+    This dialog represents the congratulations message for when the player finds all the mushrooms.
+ */
 public class WinnerDialog extends AppCompatDialogFragment {
 
     @Override

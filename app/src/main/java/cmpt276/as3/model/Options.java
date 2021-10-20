@@ -1,5 +1,9 @@
 package cmpt276.as3.model;
 
+/*
+    This class presents the options components.
+    The grid size and mushrooms are adjusted accordingly in here.
+ */
 public class Options {
     private static final int DEFAULT_ROW_SIZE = 4;
     private static final int DEFAULT_COLUMN_SIZE = 6;

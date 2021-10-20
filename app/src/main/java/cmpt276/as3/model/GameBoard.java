@@ -2,6 +2,11 @@ package cmpt276.as3.model;
 
 import java.util.Random;
 
+/*
+    This class represents the gameBoard component.
+    It handles randomizing the mushrooms on the grid,
+    and finding the remaining cells in the rows and columns for each cell.
+ */
 public class GameBoard {
     private Cell[][] gameBoard;
     private int rowSize;

@@ -11,6 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import cmpt276.as3.R;
 
+/*
+    This activity represents the welcome screen at the beginning.
+ */
 public class WelcomeActivity extends AppCompatActivity {
     private static final int DELAY_TIME_IN_MILLISECONDS = 4000;
     private Button continueButton;
@@ -24,8 +27,10 @@ public class WelcomeActivity extends AppCompatActivity {
         continueButton.setOnClickListener((View view) -> openMainActivity());
 
         new Handler().postDelayed(() -> {
+            Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-            openMainActivity();
+            startActivity(intent);
+            finish();
         }, DELAY_TIME_IN_MILLISECONDS);
     }
 

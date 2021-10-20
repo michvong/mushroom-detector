@@ -14,11 +14,13 @@ import android.widget.TextView;
 import cmpt276.as3.R;
 import cmpt276.as3.model.Options;
 
+/*
+    This activity represents the Options menu.
+    It allows the user to adjust the grid size and the amount of mushrooms that appear.
+ */
 public class OptionsActivity extends AppCompatActivity {
     private ImageButton backButton;
     private Options options;
-    private TextView gridSizeDisplay;
-    private TextView numMushroomsDisplay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

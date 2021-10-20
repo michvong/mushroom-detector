@@ -15,6 +15,10 @@ import org.w3c.dom.Text;
 
 import cmpt276.as3.R;
 
+/*
+    This activity represents the help menu of the game.
+    It shows the author, game instructions, and credits for the drawable assets.
+ */
 public class HelpActivity extends AppCompatActivity {
     private ImageButton backButton;
     TextView courseLink;

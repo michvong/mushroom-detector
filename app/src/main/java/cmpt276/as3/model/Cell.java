@@ -1,5 +1,10 @@
 package cmpt276.as3.model;
 
+/*
+    This class represents a single cell.
+    It checks if the cell contains a mushroom, has been scanned,
+    and the number of mushrooms remaining in its row and column.
+ */
 public class Cell {
     private boolean isMushroom;
     private boolean isScanned;
