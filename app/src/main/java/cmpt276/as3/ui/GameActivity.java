@@ -116,7 +116,7 @@ public class GameActivity extends AppCompatActivity {
         setScanned(row, col);
         updateDisplay(row, col);
         lockButtonSizes();
-        setCellVals(row, col, button);
+        setRemainingMushroomsForCells(row, col, button);
         checkIfWon();
     }
 
@@ -141,7 +141,7 @@ public class GameActivity extends AppCompatActivity {
         button.setBackground(new BitmapDrawable(resource, scaledBitmap));
     }
 
-    private void setCellVals(int row, int col, Button button) {
+    private void setRemainingMushroomsForCells(int row, int col, Button button) {
         if (theGameBoard[row][col].isMushroom()) {
             showMushroomImage(button);
 
