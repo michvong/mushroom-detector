@@ -25,13 +25,6 @@ public class WelcomeActivity extends AppCompatActivity {
 
         continueButton = findViewById(R.id.continueButton);
         continueButton.setOnClickListener((View view) -> openMainActivity());
-
-        new Handler().postDelayed(() -> {
-            Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
-            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-            startActivity(intent);
-            finish();
-        }, DELAY_TIME_IN_MILLISECONDS);
     }
 
     public void openMainActivity() {
