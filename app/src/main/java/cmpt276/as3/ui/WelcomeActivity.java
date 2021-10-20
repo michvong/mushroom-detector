@@ -17,6 +17,7 @@ import cmpt276.as3.R;
 public class WelcomeActivity extends AppCompatActivity {
     private static final int DELAY_TIME_IN_MILLISECONDS = 4000;
     private Button continueButton;
+    private Handler handler;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,11 +26,20 @@ public class WelcomeActivity extends AppCompatActivity {
 
         continueButton = findViewById(R.id.continueButton);
         continueButton.setOnClickListener((View view) -> openMainActivity());
+
+        handler = new Handler();
+        handler.postDelayed(() -> {
+            Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            startActivity(intent);
+            finishAffinity();
+        }, DELAY_TIME_IN_MILLISECONDS);
     }
 
     public void openMainActivity() {
         Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
         startActivity(intent);
+        handler.removeCallbacksAndMessages(null);
         finish();
     }
 
